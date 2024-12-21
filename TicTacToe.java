@@ -150,6 +150,8 @@ public class TicTacToe {
             deque.addLast(player1);
             deque.addLast(player2);
 
+            sc.close();
+
         }
         
         @SuppressWarnings("resource")
