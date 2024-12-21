@@ -19,6 +19,18 @@ public class TicTacToe {
         }
     }
 
+    public class PieceX extends PlayingPiece{
+        public PieceX(){
+            super(PieceType.X);
+        }
+    }
+
+    public class PieceO extends PlayingPiece{
+        public PieceO(){
+            super(PieceType.O);
+        }
+    }
+
 
     public class Board{
 
@@ -125,11 +137,11 @@ public class TicTacToe {
             String playingPiece = sc.nextLine();  
             
             if(playingPiece.equals("X")){
-                player1 = new Player(name1, new PlayingPiece(PieceType.X));   
-                player2 = new Player(name2, new PlayingPiece(PieceType.O)); 
+                player1 = new Player(name1, new PieceX());   
+                player2 = new Player(name2, new PieceO()); 
             }else{
-                player1 = new Player(name1, new PlayingPiece(PieceType.O));   
-                player2 = new Player(name2, new PlayingPiece(PieceType.X));
+                player1 = new Player(name1, new PieceO());   
+                player2 = new Player(name2, new PieceX());
             }
              
             players.add(player1);
